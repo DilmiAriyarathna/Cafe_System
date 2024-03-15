@@ -1,0 +1,3 @@
+ If e.KeyChar = Convert.ToChar(13) Then
+            TextBox2.Focus()
+        End If

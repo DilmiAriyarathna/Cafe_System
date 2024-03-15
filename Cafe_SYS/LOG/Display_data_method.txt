@@ -1,0 +1,12 @@
+ Public Sub Displaydata()
+        conn = GetConnect()
+        conn.Open()
+        da = New SqlDataAdapter("select * from Usert", conn)
+        dt = New DataTable()
+        da.Fill(dt)
+        DataGridView1.DataSource = dt
+        conn.Close()
+    End Sub
+
+
+Note :- In button click event need to call this method for that create this method as public.

@@ -1,0 +1,90 @@
+USE [Central_SYS]
+GO
+
+/****** Object:  Table [dbo].[Main]    Script Date: 5/14/2021 1:57:35 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[Main_tbl](
+	[Id] [int] NOT NULL,
+	[Dr] float nUll,
+	[Cr] float  null,
+	[Discription] [varchar](500) NULL,
+	[Date] [varchar](50) NOT NULL,
+	[status] varchar(100) null,
+	[Login] [varchar](50) NOT NULL,
+	[DV] int not null,
+	[invno] varchar(100) not null,
+	[invtype] varchar(100) not null,
+	[Chasier] [varchar](50) NOT NULL,
+	[cat] int not null,
+	[Supp_code] [varchar](50) NOT NULL,
+	[Number] [varchar](50) NULL,
+	[Store] [varchar](50) NOT NULL,
+	[NOI] [int] NOT NULL,
+	[NOP] [int] NOT NULL,
+	[totamt] [float] NOT NULL,
+	[Discount] [float] NULL,
+	[netamnt] [float] nULL,
+	[paymethod] [varchar](50) NOT NULL,
+	[GRN_no] [varchar](100) NULL,
+	[V_no] [varchar](100) NULL,
+	[CHK_no] [varchar](100) NULL,
+	[flag] [int] NULL,
+	[chkamt] float null,
+	[creditamt] float null,
+	[Vamt] float null,
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+ALTER TABLE dbo.Main_tbl ADD CONSTRAINT DF_Main_tbl_Dr DEFAULT (0.00) FOR Dr
+GO
+
+ALTER TABLE dbo.Main_tbl ADD CONSTRAINT DF_Main_tbl_Cr DEFAULT (0.00) FOR Cr
+GO
+
+ALTER TABLE dbo.Main_tbl ADD CONSTRAINT DF_Main_tbl_Discription DEFAULT ('0') FOR Discription
+GO
+
+ALTER TABLE dbo.Main_tbl ADD CONSTRAINT DF_Main_tbl_status DEFAULT ('0') FOR status
+GO
+
+ALTER TABLE dbo.Main_tbl ADD CONSTRAINT DF_Main_tbl_Number DEFAULT ('0') FOR Number
+GO
+
+ALTER TABLE dbo.Main_tbl ADD CONSTRAINT DF_Main_tbl_Discount DEFAULT (0.00) FOR Discount
+GO
+
+ALTER TABLE dbo.Main_tbl ADD CONSTRAINT DF_Main_tbl_netamnt DEFAULT (0.00) FOR netamnt
+GO
+
+ALTER TABLE dbo.Main_tbl ADD CONSTRAINT DF_Main_tbl_GRN_no DEFAULT ('0') FOR GRN_no
+GO
+
+ALTER TABLE dbo.Main_tbl ADD CONSTRAINT DF_Main_tbl_V_no DEFAULT ('0') FOR V_no
+GO
+
+ALTER TABLE dbo.Main_tbl ADD CONSTRAINT DF_Main_tbl_CHK_no DEFAULT ('0') FOR CHK_no
+GO
+
+ALTER TABLE dbo.Main_tbl ADD CONSTRAINT DF_Main_tbl_flag DEFAULT (0) FOR flag
+GO
+
+ALTER TABLE dbo.Main_tbl ADD CONSTRAINT DF_Main_tbl_chkamt DEFAULT (0.00) FOR chkamt
+GO
+
+ALTER TABLE dbo.Main_tbl ADD CONSTRAINT DF_Main_tbl_creditamt DEFAULT (0.00) FOR creditamt
+GO
+
+ALTER TABLE dbo.Main_tbl ADD CONSTRAINT DF_Main_tbl_Vamt DEFAULT (0.00) FOR Vamt
+GO

@@ -1,0 +1,4 @@
+ Dim result As DialogResult = MsgBox("Do you want exit ?", vbYesNo, "The Garden Cafe")
+        If (result = vbYes) Then
+            Application.Exit()
+        End If

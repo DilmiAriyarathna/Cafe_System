@@ -1,0 +1,8 @@
+vb.nrt insert Query:
+ 
+ conn = GetConnect()
+        conn.Open()
+        cmd = New SqlCommand("insert into Usert(Uid,UName,pass,div) values ('" + TextBox4.Text + "', '" + TextBox1.Text + "','" + TextBox2.Text + "','" + ComboBox1.Text + "')", conn)
+        cmd.ExecuteNonQuery()
+        MsgBox("User Infromation Inserted Successfullyy..")
+        conn.Close()

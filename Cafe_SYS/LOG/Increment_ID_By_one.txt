@@ -1,0 +1,20 @@
+Get id count to textbox:-
+ 
+  conn = GetConnect()
+        conn.Open()
+        SQL = "SELECT count(Uid) FROM Usert"
+        cmd = New SqlCommand(SQL, conn)
+        Try
+            dr = cmd.ExecuteReader
+            While dr.Read
+                TextBox4.Text = dr.GetValue(0).ToString()
+            End While
+        Catch ex As Exception
+
+        End Try
+        conn.Close()
+
+Increment Id by one when data add on the database
+   Dim i = Convert.ToInt32(TextBox4.Text)
+        i += 1
+        TextBox4.Text = i.ToString()

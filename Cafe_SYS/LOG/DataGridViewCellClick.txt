@@ -1,0 +1,7 @@
+Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
+        ' Uid()
+        If e.ColumnIndex >= 0 AndAlso e.RowIndex >= 0 Then
+            Label7.Text = DataGridView1.Rows(e.RowIndex).Cells(1).Value
+        End If
+
+    End Sub
